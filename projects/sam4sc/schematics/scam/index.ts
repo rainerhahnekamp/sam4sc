@@ -1,17 +1,17 @@
 /**
  * TODO:
- * - Direktiven von Modulen entfernen
- * - Bei den neuen Module ein Kommentar als Label für dirty versehen
- * - Bei den neuen Modulen eine Beschreibung, was das Originalmodul war und auf was zu achten ist.
  * - CheckTask der sagt, wie viele Module noch zu überprüfen sind
  * - Provide option to copy all imports, providers from original module
  * - Provide option for a blockList for imports that should be ignored when copying over
  * - Provide possibility to set standalone
- * - Show summary before proceeding
  * - Full Coverage via Jest
  *
  * DONE:
- * - Rewrite as Angular Schematic*
+ * - Empty Declaration in Modules
+ * - Rewrite as Angular Schematic
+ * - Add dirty tag in generated SCAM
+ * - Show summary before proceeding (--dry-run option)
+ * - Add todo along description to created SCAM
  */
 import { chain, Rule, SchematicsException, Tree } from '@angular-devkit/schematics';
 import { Schema as MyServiceSchema } from './schema';

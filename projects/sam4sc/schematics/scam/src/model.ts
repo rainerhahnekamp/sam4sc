@@ -18,5 +18,16 @@ export interface PartialDirective {
 }
 
 export type DirectiveMap = Map<string, Directive>;
+export function createDirectiveMap(): DirectiveMap {
+  return new Map<string, Directive>();
+}
+
 export type PartialModuleMap = Map<string, { path: string; directives: PartialDirective[] }>;
+export function createPartialModuleMap(): PartialModuleMap {
+  return new Map<string, { path: string; directives: PartialDirective[] }>();
+}
+
 export type ModuleMap = Map<string, { path: string; directives: Directive[] }>;
+export function createModuleMap(): ModuleMap {
+  return new Map<string, { path: string; directives: Directive[] }>();
+}

@@ -1,5 +1,9 @@
 /**
-* TODO: Verify the declared component works and then remove this comment
+* TODO:
+* 1. add dependencies to the imports
+* 2. make sure you aren't missing any providers
+* 3. make sure the component works (a test might be a good idea 👍)
+* 4. remove this comment block
 * SAM4SC:SCAM
 */
 

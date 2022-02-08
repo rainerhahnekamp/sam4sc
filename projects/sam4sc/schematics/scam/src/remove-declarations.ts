@@ -4,6 +4,23 @@ import { tsquery } from '@phenomnomnominal/tsquery';
 import { Identifier, PropertyAssignment } from 'typescript';
 import { ModuleMap } from './model';
 
+const COMMENT = `// SAM4SC:MCAM`;
+
+// https://stackoverflow.com/questions/34820267/detecting-type-of-line-breaks
+function getLineBreakChar(str: string) {
+  const indexOfLF = str.indexOf('\n', 1); // No need to check first-character
+
+  if (indexOfLF === -1) {
+    if (str.indexOf('\r') !== -1) return '\r';
+
+    return '\n';
+  }
+
+  if (str[indexOfLF - 1] === '\r') return '\r\n';
+
+  return '\n';
+}
+
 export function removeDeclarations(moduleMap: ModuleMap, tree: Tree) {
   for (const [name, { path }] of Array.from(moduleMap.entries())) {
     const buffer = tree.read(path);
@@ -23,6 +40,6 @@ export function removeDeclarations(moduleMap: ModuleMap, tree: Tree) {
       .substring(propertyAssignment.pos + propertyAssignment.getFullText().length)
       .replace(/\s*,/, ''); // remove potential trailing comma
 
-    tree.overwrite(path, `${prefix}${suffix}`);
+    tree.overwrite(path, `${COMMENT}${getLineBreakChar(contents)}${prefix}${suffix}`);
   }
 }

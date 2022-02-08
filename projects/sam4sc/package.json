@@ -1,5 +1,6 @@
 {
   "name": "@angular-architects/sam4sc",
+  "author": "Rainer Hahnekamp",
   "version": "0.0.1",
   "license": "MIT",
   "schematics": "./schematics/collection.json",

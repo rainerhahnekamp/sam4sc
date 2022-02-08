@@ -9,7 +9,8 @@ export function getDirectiveKeysFromModuleMap(moduleMap: PartialModuleMap): stri
 
 export function filterUndeclaredDirectives(
   moduleMap: PartialModuleMap,
-  directiveMap: DirectiveMap
+  directiveMap: DirectiveMap,
+  logger: (message: string) => void = console.log
 ) {
   const directiveKeysFromModules = getDirectiveKeysFromModuleMap(moduleMap);
   const undeclaredDirectives: Directive[] = [];
@@ -20,11 +21,11 @@ export function filterUndeclaredDirectives(
   }
 
   if (undeclaredDirectives.length > 0) {
-    console.log(`Skipping ${undeclaredDirectives.length} undeclared component(s):`);
+    logger(`Skipping ${undeclaredDirectives.length} undeclared component(s):`);
     for (const directive of undeclaredDirectives) {
-      console.log(`${directive.path}: ${directive.name}`);
+      logger(`${directive.path}: ${directive.name}`);
     }
-    console.log('');
+    logger('');
   }
 
   return undeclaredDirectives;
