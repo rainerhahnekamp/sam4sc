@@ -1,7 +1,7 @@
 import { getDirectiveKey } from './get-directive-key';
 import { Directive, DirectiveMap, PartialModuleMap } from './model';
 
-function getDirectiveKeysFromModuleMap(moduleMap: PartialModuleMap): string[] {
+export function getDirectiveKeysFromModuleMap(moduleMap: PartialModuleMap): string[] {
   return Array.from(moduleMap.values())
     .map((el) => el.directives.map((e) => getDirectiveKey(e)))
     .reduce((acc: string[], val) => [...acc, ...val], []);

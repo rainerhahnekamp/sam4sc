@@ -55,11 +55,19 @@ export function addModuleToMap(
     moduleContents,
     'Decorator > CallExpression > ObjectLiteralExpression > PropertyAssignment > Identifier[name=declarations]'
   );
+  if (props.length === 0) {
+    return;
+  }
+
   const [declarations] = props;
   const arrayLiterals = declarations.parent
     .getChildren()
     .find((child) => child.kind === SyntaxKind.ArrayLiteralExpression) as ArrayLiteralExpression;
   const directiveNames = arrayLiterals.elements.map((component) => component.getText());
+
+  if (directiveNames.length === 0) {
+    return;
+  }
 
   const directives = directiveNames.map((directiveName) => ({
     name: directiveName,

@@ -1,5 +1,5 @@
 {
-  "name": "sam4sc",
+  "name": "@angular-architects/sam4sc",
   "version": "0.0.1",
   "license": "MIT",
   "schematics": "./schematics/collection.json",

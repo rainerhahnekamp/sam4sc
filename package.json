@@ -7,7 +7,8 @@
     "build": "ng build",
     "build:sam4sc": "ng build sam4sc",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "private": true,
   "dependencies": {
@@ -25,18 +26,15 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-builders/jest": "latest",
     "@angular-devkit/build-angular": "~12.2.16",
     "@angular/cli": "~12.2.16",
     "@angular/compiler-cli": "~12.2.0",
-    "@types/jasmine": "~3.8.0",
+    "@briebug/jest-schematic": "4.0.0",
+    "@types/jest": "latest",
     "@types/node": "^12.11.1",
     "copyfiles": "^2.4.1",
-    "jasmine-core": "~3.8.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0",
+    "jest": "latest",
     "ng-packagr": "^12.1.1",
     "prettier": "^2.5.1",
     "typescript": "~4.3.5"
