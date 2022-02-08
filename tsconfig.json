@@ -14,6 +14,16 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "sam2sc": [
+        "dist/sam2sc/sam2sc",
+        "dist/sam2sc"
+      ],
+      "sam4sc": [
+        "dist/sam4sc/sam4sc",
+        "dist/sam4sc"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [

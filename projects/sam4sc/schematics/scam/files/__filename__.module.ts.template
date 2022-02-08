@@ -1,0 +1,15 @@
+/**
+* TODO: Verify the declared component works and then remove this comment
+* SAM4SC:SCAM
+*/
+
+import { <%= directive %> } from './<%= directiveFilename %>';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@NgModule({
+  declarations: [<%= directive %>],
+  exports: [<%= directive %>],
+  imports: [CommonModule]
+})
+export class <%= directive %>Module {}

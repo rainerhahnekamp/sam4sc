@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsSCAM",
+  "title": "Semi-Automatic Migrator for Standalone Components",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The name of the project you want to migrate",
+      "$default": {
+        "$source": "projectName"
+      }
+    }
+  }
+}
