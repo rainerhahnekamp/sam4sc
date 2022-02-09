@@ -38,7 +38,6 @@ export function toScam(options: MyServiceSchema): Rule {
     >();
 
     forEachTsFile(tree, sourceRoot, (filePath) => {
-      console.log('reading ' + filePath);
       const buffer = tree.read(filePath);
       if (buffer === null) {
         throw new SchematicsException(`cannot read contents of ${filePath}`);
