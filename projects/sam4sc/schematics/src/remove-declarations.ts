@@ -3,6 +3,8 @@ import { SchematicsException, Tree } from '@angular-devkit/schematics';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { Identifier, PropertyAssignment } from 'typescript';
 import { ModuleMap } from './model';
+import { readFile } from './read-file';
+import { removeListElement } from './ts-helper';
 
 const COMMENT = `// SAM4SC:MCAM`;
 
@@ -23,11 +25,7 @@ function getLineBreakChar(str: string) {
 
 export function removeDeclarations(moduleMap: ModuleMap, tree: Tree) {
   for (const [name, { path }] of Array.from(moduleMap.entries())) {
-    const buffer = tree.read(path);
-    if (buffer === null) {
-      throw new SchematicsException(`cannot read module ${name}`);
-    }
-    const contents = buffer.toString('utf-8');
+    const contents = readFile(tree, path);
 
     const [declarations] = tsquery(
       contents,
@@ -35,11 +33,8 @@ export function removeDeclarations(moduleMap: ModuleMap, tree: Tree) {
     ) as Identifier[];
     const propertyAssignment = declarations.parent as PropertyAssignment;
 
-    const prefix = contents.substring(0, propertyAssignment.pos);
-    const suffix = contents
-      .substring(propertyAssignment.pos + propertyAssignment.getFullText().length)
-      .replace(/\s*,/, ''); // remove potential trailing comma
+    const newContents = removeListElement(contents, propertyAssignment);
 
-    tree.overwrite(path, `${COMMENT}${getLineBreakChar(contents)}${prefix}${suffix}`);
+    tree.overwrite(path, `${COMMENT}${getLineBreakChar(contents)}${newContents}`);
   }
 }

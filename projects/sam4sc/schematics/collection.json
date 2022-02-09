@@ -10,6 +10,11 @@
       "description": "Lists all SCAM and components that need to be fixed manually",
       "factory": "./report/index#report",
       "schema": "./report/schema.json"
+    },
+    "sc": {
+      "description": "Migrate all SCAMs to Standalone Components",
+      "factory": "./sc/index#sc",
+      "schema": "./sc/schema.json"
     }
   }
 }

@@ -1,16 +1,15 @@
 import { SchematicsException } from '@angular-devkit/schematics';
 import { getDirectiveKey } from './get-directive-key';
-import { Directive, DirectiveMap, PartialModuleMap } from './model';
+import { createPartialModuleMap, Directive, DirectiveMap, PartialModuleMap } from './model';
 
 export function filterScamModules(
   moduleMap: PartialModuleMap,
   directiveMap: DirectiveMap
-): PartialModuleMap {
+): { filteredModuleMap: PartialModuleMap; scamModuleMap: PartialModuleMap } {
   const scamDirectives: Directive[] = [];
-  const filteredModuleMap: PartialModuleMap = new Map<
-    string,
-    { path: string; directives: { path: string; name: string }[] }
-  >();
+  const scamModuleMap = createPartialModuleMap();
+  const filteredModuleMap = createPartialModuleMap();
+
   for (const [key, value] of Array.from(moduleMap.entries())) {
     if (value.directives.length === 1) {
       const [partialDirective] = value.directives;
@@ -21,6 +20,7 @@ export function filterScamModules(
         );
       }
       scamDirectives.push(directive);
+      scamModuleMap.set(key, value);
     } else {
       filteredModuleMap.set(key, value);
     }
@@ -34,5 +34,5 @@ export function filterScamModules(
     console.log('');
   }
 
-  return filteredModuleMap;
+  return { filteredModuleMap, scamModuleMap };
 }

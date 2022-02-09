@@ -27,6 +27,14 @@ export interface Report {
   scams: ReportItem[];
 }
 
+export interface ScAction {
+  modulePath: string;
+  componentPath: string;
+  componentContents: string;
+  moduleContents?: string;
+  deleteModule: boolean;
+}
+
 export type DirectiveMap = Map<string, Directive>;
 export function createDirectiveMap(): DirectiveMap {
   return new Map<string, Directive>();
