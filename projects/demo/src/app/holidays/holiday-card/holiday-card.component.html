@@ -3,6 +3,7 @@
   [attr.data-test]="'holiday-' + holiday.id"
   [ngClass]="{ 'sold-out': holiday.soldOut }"
   class="my-4 mx-4"
+  appBlinker
 >
   <mat-card-header>
     <mat-card-title>{{ holiday.title }}</mat-card-title>
@@ -15,8 +16,10 @@
       <span *ngIf="holiday.soldOut" class="middle-full badge">Sold out</span>
     </div>
   </figure>
-  <mat-card-content class="h-16 overflow-clip overflow-hidden">
-    {{ holiday.description }}
+  <mat-card-content
+    class="h-16 overflow-clip overflow-hidden"
+    [innerHTML]="holiday.description | holiday: holiday.title"
+  >
   </mat-card-content>
   <mat-card-actions class="justify-evenly">
     <a [routerLink]="['./request-info', holiday.id]" data-test="btn-brochure" mat-raised-button>

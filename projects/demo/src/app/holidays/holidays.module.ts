@@ -12,11 +12,19 @@ import { StoreModule } from '@ngrx/store';
 import { HolidaysEffects } from './+state/holidays.effects';
 import { holidaysFeature } from './+state/holidays.reducer';
 import { HolidayCardComponent } from './holiday-card/holiday-card.component';
+import { HolidayPipe } from './holiday.pipe';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { RequestInfoComponent } from './request-info/request-info.component';
+import { BlinkerDirective } from './blinker.directive';
 
 @NgModule({
-  declarations: [HolidayCardComponent, HolidaysComponent, RequestInfoComponent],
+  declarations: [
+    HolidayCardComponent,
+    HolidaysComponent,
+    RequestInfoComponent,
+    BlinkerDirective,
+    HolidayPipe
+  ],
   imports: [
     RouterModule.forChild([
       {
