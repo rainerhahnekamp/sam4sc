@@ -15,7 +15,7 @@ describe('print report', () => {
       output: [
         'Please fix following modules:',
         '=====================================================',
-        'Migrated (check if they are required or delete them):',
+        'Migrated (legacy) Modules - check if they are still needed or delete them',
         '- app1.ts',
         '- app2.ts',
         '-----------------------------------------------------',
@@ -36,7 +36,7 @@ describe('print report', () => {
       output: [
         'Please fix following modules:',
         '=====================================================',
-        'Migrated (check if they are required or delete them):',
+        'Migrated (legacy) Modules - check if they are still needed or delete them',
         '- app1.ts',
         '- module.ts',
         ''

@@ -6,7 +6,7 @@ export function printReport(report: Report, print: (msg: string) => void = conso
     print('=====================================================');
 
     if (report.mcams.length) {
-      print('Migrated (check if they are required or delete them):');
+      print('Migrated (legacy) Modules - check if they are still needed or delete them');
       for (let mcam of report.mcams) {
         print('- ' + mcam.path);
       }
