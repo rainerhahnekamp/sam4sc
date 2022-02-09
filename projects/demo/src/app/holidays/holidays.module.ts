@@ -1,3 +1,4 @@
+// SAM4SC:MCAM
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -18,13 +19,6 @@ import { RequestInfoComponent } from './request-info/request-info.component';
 import { BlinkerDirective } from './blinker.directive';
 
 @NgModule({
-  declarations: [
-    HolidayCardComponent,
-    HolidaysComponent,
-    RequestInfoComponent,
-    BlinkerDirective,
-    HolidayPipe
-  ],
   imports: [
     RouterModule.forChild([
       {

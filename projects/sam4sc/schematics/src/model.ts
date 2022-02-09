@@ -17,6 +17,16 @@ export interface PartialDirective {
   name: string;
 }
 
+export interface ReportItem {
+  type: 'SCAM' | 'MCAM';
+  path: string;
+}
+
+export interface Report {
+  mcams: ReportItem[];
+  scams: ReportItem[];
+}
+
 export type DirectiveMap = Map<string, Directive>;
 export function createDirectiveMap(): DirectiveMap {
   return new Map<string, Directive>();

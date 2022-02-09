@@ -5,6 +5,11 @@
       "description": "Generates a module per component which is declared in an NgModule that declares multiple components.",
       "factory": "./scam/index#toScam",
       "schema": "./scam/schema.json"
+    },
+    "report": {
+      "description": "Lists all SCAM and components that need to be fixed manually",
+      "factory": "./report/index#report",
+      "schema": "./report/schema.json"
     }
   }
 }

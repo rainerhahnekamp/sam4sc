@@ -11,7 +11,8 @@
     "test:watch": "jest --watch -i",
     "test:coverage": "jest --collect-coverage",
     "sam4sc:scam": "ng g @angular-architects/sam4sc:scam",
-    "sam4sc:scam:dry": "ng g @angular-architects/sam4sc:scam --dry-run"
+    "sam4sc:scam:dry": "ng g @angular-architects/sam4sc:scam --dry-run",
+    "sam4sc:report": "ng g @angular-architects/sam4sc:report"
   },
   "private": true,
   "dependencies": {
