@@ -1,5 +1,5 @@
 import { tsquery } from '@phenomnomnominal/tsquery';
-import { Identifier, PropertyAssignment } from 'typescript';
+import { PropertyAssignment } from 'typescript';
 import { ScAction } from '../src/model';
 
 export function createScAction(
@@ -19,6 +19,9 @@ export function createScAction(
     componentPath,
     'Decorator > CallExpression > ObjectLiteralExpression > PropertyAssignment:last-child'
   ) as PropertyAssignment[];
+
+  console.log(moduleContents.length);
+  console.log(decoratorProperty);
 
   return scAction;
 }

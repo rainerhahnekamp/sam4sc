@@ -1,4 +1,4 @@
-import { SchematicsException, Tree } from '@angular-devkit/schematics';
+import { Tree } from '@angular-devkit/schematics';
 
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { Identifier, PropertyAssignment } from 'typescript';
@@ -24,7 +24,7 @@ function getLineBreakChar(str: string) {
 }
 
 export function removeDeclarations(moduleMap: ModuleMap, tree: Tree) {
-  for (const [name, { path }] of Array.from(moduleMap.entries())) {
+  for (const [, { path }] of Array.from(moduleMap.entries())) {
     const contents = readFile(tree, path);
 
     const [declarations] = tsquery(
