@@ -59,6 +59,14 @@ describe('print report', () => {
         '- module2.ts',
         ''
       ]
+    },
+    {
+      name: 'empty',
+      report: {
+        mcams: [],
+        scams: []
+      },
+      output: ['Looks like there is nothing left to do. 👍', '']
     }
   ];
 
