@@ -46,22 +46,18 @@ export class HolidayCardComponent {
   @Input() holiday: Holiday | undefined;
 }`;
 
-    const scComponentTs = `
-import { Component, Input } from '@angular/core';
-import { Holiday } from '../holiday';
-import { MatButtonModule } from '@angular/material/button';
+    const scComponentTs = `import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { BlinkerDirectiveModule } from '../blinker.directive.module';
 import { HolidayPipeModule } from '../holiday.pipe.module';
-import { HolidayCardComponent } from './holiday-card.component';
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { Holiday } from '../holiday';
 
 @Component({
-  selector: 'app-holiday-card',
-  templateUrl: './holiday-card.component.html',
-  styleUrls: ['./holiday-card.component.scss'],
-  standalone: true,
+standalone: true,
+
   imports: [
     CommonModule,
     MatCardModule,
@@ -69,7 +65,10 @@ import { CommonModule } from '@angular/common';
     HolidayPipeModule,
     RouterModule,
     MatButtonModule
-  ]
+  ],
+  selector: 'app-holiday-card',
+  templateUrl: './holiday-card.component.html',
+  styleUrls: ['./holiday-card.component.scss']
 })
 export class HolidayCardComponent {
   @Input() holiday: Holiday | undefined;
@@ -77,11 +76,6 @@ export class HolidayCardComponent {
 
     const scAction = createScAction('module.ts', moduleTs, 'component.ts', componentTs);
 
-    expect(scAction).toEqual({
-      modulePath: 'module.ts',
-      componentPath: 'component.ts',
-      deleteModule: true,
-      componentContents: scComponentTs
-    });
+    expect(scAction.componentContents).toEqual(scComponentTs);
   });
 });
