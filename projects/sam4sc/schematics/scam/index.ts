@@ -5,6 +5,7 @@
  * - Provide option for a blockList for imports that should be ignored when copying over
  * - Provide possibility to set standalone
  * - Full Coverage via Jest
+ * - Add a pipe, directive and customers module to demo app
  *
  * DONE:
  * - Empty Declaration in Modules
