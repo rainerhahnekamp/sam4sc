@@ -2,19 +2,19 @@ import { ReportItem } from '../model';
 import { parseReportItem } from './parse-report-item';
 
 describe('find report data', () => {
-  it('should identify the component', () => {
+  it('should identify the mcam', () => {
     const ts = `
-/* SAM4SC:DIRECTIVE
+// SAM4SC:MCAM
 
 @NgModule({})
 export class SomeModule {
 }`;
 
-    const reportItem: ReportItem = { type: 'Directive', path: 'src/module.ts' };
+    const reportItem: ReportItem = { type: 'MCAM', path: 'src/module.ts' };
     expect(parseReportItem(ts, 'src/module.ts')).toEqual(reportItem);
   });
 
-  it('should identify the module', () => {
+  it('should identify the scam', () => {
     const ts = `
 /* SAM4SC:SCAM
 
