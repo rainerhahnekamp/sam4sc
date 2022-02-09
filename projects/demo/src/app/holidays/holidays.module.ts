@@ -19,6 +19,13 @@ import { RequestInfoComponent } from './request-info/request-info.component';
 import { BlinkerDirective } from './blinker.directive';
 
 @NgModule({
+  declarations: [
+    HolidayCardComponent,
+    HolidaysComponent,
+    RequestInfoComponent,
+    BlinkerDirective,
+    HolidayPipe
+  ],
   imports: [
     RouterModule.forChild([
       {
