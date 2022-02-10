@@ -1,7 +1,7 @@
 {
   "name": "sam4sc",
   "author": "Rainer Hahnekamp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "schematics": "./schematics/collection.json",
   "scripts": {
@@ -10,7 +10,7 @@
     "fullbuild": "npm run build && npm run postbuild"
   },
   "peerDependencies": {
-    "@angular/common": "^>=12.2.0",
+    "@angular/common": ">=12.2.0",
     "@angular/core": ">=12.2.0",
     "@phenomnomnominal/tsquery": "^4.2.0"
   },
