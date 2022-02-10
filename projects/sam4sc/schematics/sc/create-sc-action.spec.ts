@@ -8,6 +8,40 @@ describe('createScAction', () => {
   it.todo('should transfer to component with componentProviders');
   it.todo('should work on file with multiple components');
 
+  it('should map without imports', () => {
+    const moduleTs = `
+import { NgModule } from '@angular/core';
+import { ScamComponent } from './scam.component';
+
+@NgModule({
+  declarations: [ScamComponent]
+})
+export class ScamComponentModule {}
+`;
+
+    const componentTs = `
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'pps-scam',
+  template: ''
+})
+export class ScamComponent {}`;
+
+    const scComponentTs = `
+import { Component } from '@angular/core';
+
+@Component({
+standalone: true,
+  selector: 'pps-scam',
+  template: ''
+})
+export class ScamComponent {}`;
+
+    const scAction = createScAction('module.ts', moduleTs, 'component.ts', componentTs);
+    expect(scAction.componentContents).toEqual(scComponentTs);
+  });
+
   it("should map a module's import to component", () => {
     const moduleTs = `
 import { MatButtonModule } from '@angular/material/button';
