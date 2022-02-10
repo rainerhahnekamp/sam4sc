@@ -13,7 +13,7 @@
     "sam4sc:scam": "ng g @angular-architects/sam4sc:scam",
     "sam4sc:scam:dry": "ng g @angular-architects/sam4sc:scam --dry-run",
     "sam4sc:report": "ng g @angular-architects/sam4sc:report",
-    "sam4sc:sc": "ng g @angular-architects/sam4sc:sc"
+    "sam4sc:scam2sc": "ng g @angular-architects/sam4sc:scam2sc"
   },
   "private": true,
   "dependencies": {
