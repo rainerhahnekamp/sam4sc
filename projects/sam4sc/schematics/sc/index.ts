@@ -23,7 +23,6 @@ export function sc(options: MyServiceSchema): Rule {
       const moduleContents = readFile(tree, modulePath);
 
       if (!componentPath.endsWith('inline-module.component.ts')) {
-        console.log(componentPath);
         const scAction = createScAction(
           modulePath,
           moduleContents,

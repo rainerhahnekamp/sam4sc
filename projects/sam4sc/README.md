@@ -1,24 +1,58 @@
-# Sam4sc
+## 1. Introduction
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+Sam4Sc is a migration assistant for Angular to SCAM (Single Angular Component Modules) and Standalone Components.
 
-## Code scaffolding
+Migrating an Angular application to the SCAM model is a preparation for the final switch to Standalone Components.
 
-Run `ng generate component component-name --project sam4sc` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project sam4sc`.
-> Note: Don't forget to add `--project sam4sc` or else it will be added to the default project in your `angular.json` file. 
+Sam4Sc assists in both steps, whereas the migration from SCAM to Standalone Components is fully automatic.
 
-## Build
+The migration/generation of SCAMs is semi-automatic. The SCAMs a generated first. After that, the developer(s) must define the dependencies per SCAM manually.
 
-Run `ng build sam4sc` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 2. Setup and Usage
 
-## Publishing
+To install Sam4Sc, execute
+```bash
+npm i -D @angular-architects@sam4sc
+```
 
-After building your library with `ng build sam4sc`, go to the dist folder `cd dist/sam4sc` and run `npm publish`.
+### 2.1. Generate SCAMs
 
-## Running unit tests
+```bash
+npx ng generate @angular-architects/sam4sc:scam --dry-run
+# make sure, everything looks alright
+npx ng generate @angular-architects/sam4sc:scam
+```
 
-Run `ng test sam4sc` to execute the unit tests via [Karma](https://karma-runner.github.io).
+or alternatively,
 
-## Further help
+```
+npx ng generate @angular-architects:sam4sc:scam --project [projectName]
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 2.2. Show the progress report for the SCAM report
+
+```bash
+npx ng generate @angular-architects/sam4sc:report
+```
+
+SCAMs will have a JavaScript comment at the start of the file with a tag SAM4SC:SCAM. Remove those, if you have added the dependencies and that module will not show up in the progress report.
+
+### 2.3. Migrate to Standalone Components (Beta)
+
+```bash
+npx ng generate @angular-architects/sam4s:scam2sc
+```
+
+Please feel free to try it out and give feedback.
+
+## 3. More information
+- [Detailed Explanation of SCAM, by Lars Gyrup Brink Nielsen](https://dev.to/this-is-angular/angular-revisited-tree-shakable-components-and-optional-ngmodules-36d2)
+- [RFC Standalone Components](https://github.com/angular/angular/discussions/43784)
+- [Standalone Components and their Impact on Modularity, by Rainer Hahnekamp](https://www.rainerhahnekamp.com/en/angular-standalone-components-and-their-impact-on-modularity/)
+
+
+
+[Angular Architects: Angular Content, Consultancy, Training](https://www.angulararchitects.io)
+
+<img src="angular-architects.svg" style='width: 250px; height: auto'>
+

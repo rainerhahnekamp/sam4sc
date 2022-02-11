@@ -1,5 +1,6 @@
 {
   "name": "sam4sc",
+  "author": "Rainer Hahnekamp",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,9 +12,10 @@
     "test:watch": "jest --watch -i",
     "test:coverage": "jest --collect-coverage",
     "sam4sc:scam": "ng g @angular-architects/sam4sc:scam",
-    "sam4sc:scam:dry": "ng g sam4sc:scam --dry-run",
-    "sam4sc:report": "ng g sam4sc:report",
-    "sam4sc:scam2sc": "ng g sam4sc:scam2sc"
+    "sam4sc:scam:dry": "ng g @angular-architects/sam4sc:scam --dry-run",
+    "sam4sc:report": "ng g @angular-architects/sam4sc:report",
+    "sam4sc:scam2scam2sc": "ng g @angular-architects/sam4sc:scam2sc",
+    "sam4sc:scam2scam2sc:dry": "ng g @angular-architects/sam4sc:scam2sc"
   },
   "private": true,
   "dependencies": {
