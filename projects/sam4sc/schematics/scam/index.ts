@@ -1,6 +1,6 @@
 /**
  * TODO:
- * - CheckTask der sagt, wie viele Module noch zu überprüfen sind
+ * - CheckTask stating how many Modules remain to be checked
  * - Provide option to copy all imports, providers from original module
  * - Provide option for a blockList for imports that should be ignored when copying over
  * - Provide possibility to set standalone
