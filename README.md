@@ -15,7 +15,7 @@ The migration/generation of SCAMs is semi-automatic. The SCAMs a generated first
 
 To install Sam4Sc, execute
 ```bash
-npm i -D @angular-architects@sam4sc
+npm i -D @angular-architects/sam4sc
 ```
 
 ### 2.1. Generate SCAMs
