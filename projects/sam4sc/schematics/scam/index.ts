@@ -41,7 +41,7 @@ export function toScam(options: MyServiceSchema): Rule {
     }
 
     removeDeclarations(moduleMap, tree);
-
-    return chain(rules);
+    
+    return chain(rules.map(rule => () => Promise.resolve(rule)));
   };
 }
