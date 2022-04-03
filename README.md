@@ -75,7 +75,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.rainerhahnekamp.com"><img src="https://avatars.githubusercontent.com/u/5721205?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rainer Hahnekamp</b></sub></a><br /><a href="https://github.com/rainerhahnekamp/sam4sc/commits?author=rainerhahnekamp" title="Code">💻</a></td>
     <td align="center"><a href="https://dev.to/layzee"><img src="https://avatars.githubusercontent.com/u/6364586?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lars Gyrup Brink Nielsen</b></sub></a><br /><a href="https://github.com/rainerhahnekamp/sam4sc/commits?author=LayZeeDK" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/hm2075"><img src="https://avatars.githubusercontent.com/u/53794682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hm2075</b></sub></a><br /><a href="https://github.com/rainerhahnekamp/sam4sc/issues?q=author%3Ahm2075" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/hm2075"><img src="https://avatars.githubusercontent.com/u/53794682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hm2075</b></sub></a><br /><a href="https://github.com/rainerhahnekamp/sam4sc/issues?q=author%3Ahm2075" title="Code">💻</a></td>
   </tr>
 </table>
 
