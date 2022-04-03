@@ -42,6 +42,7 @@ export function toScam(options: MyServiceSchema): Rule {
 
     removeDeclarations(moduleMap, tree);
     
+    // https://github.com/angular/angular-cli/issues/17851#issuecomment-1067921103
     return chain(rules.map(rule => () => Promise.resolve(rule)));
   };
 }
