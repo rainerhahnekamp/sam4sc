@@ -22,6 +22,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "hm2075",
+      "name": "hm2075",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53794682?v=4",
+      "profile": "https://github.com/hm2075",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
