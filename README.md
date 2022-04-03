@@ -32,6 +32,10 @@ or alternatively,
 npx ng generate @angular-architects/sam4sc:scam --project [projectName]
 ```
 
+Sam4sc prints out a list of existing SCAMs, and also if components are undeclared.
+
+SCAM is nothing else than an NgModule which declares only one element. It is quite possible that you have already SCAMs in your application.
+
 ### 2.2. Show the progress report for the SCAM report
 
 ```bash
