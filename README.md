@@ -29,7 +29,7 @@ npx ng generate @angular-architects/sam4sc:scam
 or alternatively,
 
 ```
-npx ng generate @angular-architects:sam4sc:scam --project [projectName]
+npx ng generate @angular-architects/sam4sc:scam --project [projectName]
 ```
 
 ### 2.2. Show the progress report for the SCAM report
@@ -43,7 +43,7 @@ SCAMs will have a JavaScript comment at the start of the file with a tag SAM4SC:
 ### 2.3. Migrate to Standalone Components (Beta)
 
 ```bash
-npx ng generate @angular-architects/sam4s:scam2sc
+npx ng generate @angular-architects/sam4sc:scam2sc
 ```
 
 Please feel free to try it out and give feedback.
